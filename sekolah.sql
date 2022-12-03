@@ -30,7 +30,7 @@ CREATE TABLE [SISWA] (
 	[Nisn] NVARCHAR(16),
 	[Nama] NVARCHAR(128),
 	[Kota] NVARCHAR(128),
-	[Kecamatan] NVARCHAR(128),NVARCHAR(128),
+	[Kecamatan] NVARCHAR(128),
 	[Kelurahan] NVARCHAR(128),
 	[Jalan] NVARCHAR(128),
 	[TempatLahir] NVARCHAR(256),
