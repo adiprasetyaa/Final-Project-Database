@@ -21,7 +21,6 @@ CREATE TABLE [ORTU] (
 	[Nik] NVARCHAR(16) NOT NULL,
 	[Nama] NVARCHAR(128),
 	[NoTelp] NVARCHAR(16),
-	[Alamat] NVARCHAR(256),
 	
 	CONSTRAINT [PK_ORTU] PRIMARY KEY ([Nik]),
 );
@@ -30,7 +29,10 @@ CREATE TABLE [SISWA] (
 	[Nis] NVARCHAR(16) NOT NULL,
 	[Nisn] NVARCHAR(16),
 	[Nama] NVARCHAR(128),
-	[Alamat] NVARCHAR(256),
+	[Kota] NVARCHAR(128),
+	[Kecamatan] NVARCHAR(128),NVARCHAR(128),
+	[Kelurahan] NVARCHAR(128),
+	[Jalan] NVARCHAR(128),
 	[TempatLahir] NVARCHAR(256),
 	[JenisKelamin] BIT,
 	[TanggalLahir] DATE,
