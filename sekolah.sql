@@ -153,6 +153,7 @@ CREATE TABLE [MENGAJAR] (
 	[KdGuru] NVARCHAR(16) NOT NULL,
 	[KdKelas] NVARCHAR(16) NOT NULL,
 	[NamaMapel] NVARCHAR(64)NOT NULL,
+	[Semester] INT,
 	[JamPerminggu] INT,
 	[NilaiUts] INT,
 	[NilaiUas] INT,
