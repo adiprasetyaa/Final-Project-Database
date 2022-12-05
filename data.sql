@@ -51,56 +51,69 @@ INSERT INTO SEKOLAH.dbo.ORTU (Nik,Nama,NoTelp) VALUES
 	 (N'3387245011432740',N'Setiawan Kusuma Sugiarto',N'6289704941474'),
 	 (N'3391773594789590',N'Susila Sudomo Kurniawan',N'6287734045414');
 	 
-INSERT INTO SEKOLAH.dbo.SISWA (Nis,Nisn,Nama,Kota,Kecamatan,Kelurahan,Jalan,TempatLahir,JenisKelamin,TanggalLahir,TanggalMasuk,TanggalKeluar,TanggalLulus,NikOrtu) VALUES
-	 (N'0001',N'4313287581',N'Kasih Mega Sasmita',N'Surakarta',N'Banjarsari',N'Jebres',N'Jl. Arif Rahman Hakim 81',N'Surakarta',1,'2006-10-27','2019-08-12',NULL,'2022-06-13',N'3358855077184980'),
-	 (N'0002',N'4313243448',N'Guntur Adi Atmadja',N'Surakarta',N'Banjarsari',N'Jebres',N'Jl. Irian 17-31',N'Sukoharjo',0,'2006-05-27','2019-08-12',NULL,'2022-06-13',N'3352736411223150'),
-	 (N'0003',N'4313226940',N'Suryadi Bambang Sasmita',N'Surakarta',N'Banjarsari',N'Gilingan',N'Jl. DI Panjaitan 11-15',N'Jakarta',0,'2006-01-30','2019-08-12',NULL,'2022-06-13',N'3357366291969810'),
-	 (N'0004',N'4313237477',N'Ade Guntur Sasmita',N'Surakarta',N'Banjarsari',N'Ketelan',N'Jl. R. M. Said 82-78',N'Sukoharjo',0,'2006-08-07','2019-08-12',NULL,'2022-06-13',N'3311937122629060'),
-	 (N'0005',N'4313299357',N'Susilo Sukarno Iskandar',N'Surakarta',N'Banjarsari',N'Ketelan',N'Jl. Gajahmada 82',N'Surakarta',0,'2006-01-27','2019-08-12',NULL,'2022-06-13',N'3327311505556210'),
-	 (N'0006',N'4313230927',N'Ari Setiawan Tahyadi',N'Surakarta',N'Banjarsari',N'Punggawan',N'Jl. Bungur I No.21',N'Sukoharjo',0,'2006-11-05','2019-08-12',NULL,'2022-06-13',N'3312498178030100'),
-	 (N'0007',N'4313209455',N'Bethari Susanti Yuwono',N'Surakarta',N'Banjarsari',N'Punggawan',N'Jl. Yosodipuro',N'Karanganyar',1,'2006-03-09','2019-08-12',NULL,'2022-06-13',N'3337890045527750'),
-	 (N'0008',N'4313252488',N'Yuliana Leony Setiabudi',N'Surakarta',N'Banjarsari',N'Timuran',N'Jl. Gajahmada,',N'Klaten',1,'2006-05-07','2019-08-12',NULL,'2022-06-13',N'3366708648809400'),
-	 (N'0009',N'4313253516',N'Citra Intan Halim',N'Surakarta',N'Banjarsari',N'Timuran',N'Jl. Soka VI No.1',N'Boyolali',1,'2006-12-01','2019-08-12',NULL,'2022-06-13',N'3339356849039430'),
-	 (N'0010',N'4313205909',N'Ivan Yuda Darmali',N'Surakarta',N'Laweyan',N'Panularan',N'Gg. Rajamanggala 1',N'Semarang',0,'2007-02-19','2020-08-15',NULL,NULL,N'3354376504459980');
-INSERT INTO SEKOLAH.dbo.SISWA (Nis,Nisn,Nama,Kota,Kecamatan,Kelurahan,Jalan,TempatLahir,JenisKelamin,TanggalLahir,TanggalMasuk,TanggalKeluar,TanggalLulus,NikOrtu) VALUES
-	 (N'0011',N'4313221732',N'Richard Islami',N'Surakarta',N'Laweyan',N'Tipes',N'Jl. Moh. Yamin 166-158',N'Surakarta',1,'2007-02-17','2020-08-15',NULL,NULL,N'3387245011432740'),
-	 (N'0012',N'4313217554',N'Putri Gayatri',N'Surakarta',N'Laweyan',N'Tipes',N'Jl. Wijaya Kusuma',N'Sukoharjo',0,'2007-03-25','2020-08-15',NULL,NULL,N'3356698509680710'),
-	 (N'0013',N'4313213377',N'Lintang Cahya',N'Surakarta',N'Serengan',N'Tipes',N'Jl. Bhayangkara',N'Yogyakarta',1,'2007-01-23','2020-08-15',NULL,NULL,N'3322394863627910'),
-	 (N'0014',N'4313209199',N'Aldi Indra',N'Surakarta',N'Laweyan',N'Panularan',N'Jl. Tejomoyo Selatan 8',N'Sukoharjo',1,'2007-09-24','2020-08-15','2021-06-17',NULL,N'3355175446077530'),
-	 (N'0015',N'4313205021',N'Azmi Bayhacki',N'Surakarta',N'Laweyan',N'Penumping',N'Jl. Dr. Rajiman No.347',N'Surakarta',1,'2007-11-18','2020-08-15',NULL,NULL,N'3333382983837480'),
-	 (N'0016',N'4313200843',N'Cinta Wardani',N'Surakarta',N'Laweyan',N'Penumping',N'Jl. Sutowijoyo 1',N'Sukoharjo',0,'2007-10-14','2020-08-15',NULL,NULL,N'3315116448689080'),
-	 (N'0017',N'4313196666',N'Mochammad Qodriyah',N'Surakarta',N'Laweyan',N'Bumi',N'Jl. Batik Keris',N'Salatiga',1,'2007-08-16','2020-08-15',NULL,NULL,N'3353755312426660'),
-	 (N'0018',N'4313192488',N'Syarief Farishy',N'Surakarta',N'Laweyan',N'Bumi',N'Jl. Dr. Rajiman No.461',N'Klaten',1,'2007-08-27','2020-08-15',NULL,NULL,N'3391773594789590'),
-	 (N'0019',N'4313188310',N'Givan Daniel Raisid',N'Surakarta',N'Laweyan',N'Bumi',N'Jl. Dr. Rajiman No.432E',N'Boyolali',1,'2007-09-14','2020-08-15',NULL,NULL,N'3303168486211500'),
-	 (N'0020',N'4313184132',N'Dikposa Agtrivia',N'Surakarta',N'Laweyan',N'Sriwedari',N'Jl. Dr. Cipto Mangunkusumo No.18',N'Semarang',0,'2007-11-01','2020-08-15',NULL,NULL,N'3305047545050660');
-INSERT INTO SEKOLAH.dbo.SISWA (Nis,Nisn,Nama,Kota,Kecamatan,Kelurahan,Jalan,TempatLahir,JenisKelamin,TanggalLahir,TanggalMasuk,TanggalKeluar,TanggalLulus,NikOrtu) VALUES
-	 (N'0021',N'4313179955',N'Mubarak Alrendy Noviana',N'Surakarta',N'Laweyan',N'Penumping',N'Jl. Kalitan No.12',N'Surakarta',1,'2007-04-14','2020-08-15',NULL,NULL,N'3372223490705380'),
-	 (N'0022',N'4313175777',N'Deristya Zulfianna',N'Surakarta',N'Laweyan',N'Sriwedari',N'Jl. Dr. Sutomo',N'Sukoharjo',0,'2008-10-03','2021-08-17',NULL,NULL,N'3357502588002590'),
-	 (N'0023',N'4313171599',N'Eka Bony Marwah',N'Surakarta',N'Laweyan',N'Penumping',N'Gg. I Kalitan',N'Kulon Progo',1,'2008-03-01','2021-08-17',NULL,NULL,N'3323327829306850'),
-	 (N'0024',N'4313167422',N'Sumandi Izhar',N'Surakarta',N'Jebres',N'Jebres',N'Jl. Guruh',N'Sukoharjo',1,'2008-08-23','2021-08-17',NULL,NULL,N'3345199244640220'),
-	 (N'0025',N'4313163244',N'Irlan Pemana',N'Surakarta',N'Jebres',N'Jebres',N'Jl. Petir No.23',N'Surakarta',1,'2008-07-06','2021-08-17',NULL,NULL,N'3370093250814170'),
-	 (N'0026',N'4313159066',N'Juno Satria',N'Surakarta',N'Jebres',N'Jebres',N'Gg. Guruh I No.30-6',N'Sukoharjo',1,'2008-11-24','2021-08-17',NULL,NULL,N'3321872835587910'),
-	 (N'0027',N'4313154888',N'Christiana Keviati',N'Surakarta',N'Jebres',N'Jebres',N'Jl. Gg. Guntur ll No.30',N'Salatiga',0,'2008-04-13','2021-08-17','2022-06-06',NULL,N'3366155158279800'),
-	 (N'0028',N'4313150711',N'Adam Machmud',N'Surakarta',N'Jebres',N'Kentingan',N'Jln.halilintar no.99',N'Klaten',1,'2008-03-24','2021-08-17',NULL,NULL,N'3376281658987110'),
-	 (N'0029',N'4313146533',N'Allen Nistiyana',N'Surakarta',N'Jebres',N'Jebres',N'Gg. Gelatik',N'Surakarta',0,'2007-12-17','2021-08-17',NULL,NULL,N'3337646823170630'),
-	 (N'0030',N'4313142355',N'Hesti Nathania',N'Surakarta',N'Jebres',N'Jebres',N'Jl. Ki Hajar Dewantara No.78',N'Surakarta',0,'2008-05-02','2021-08-17',NULL,NULL,N'3309542387405480');
-INSERT INTO SEKOLAH.dbo.SISWA (Nis,Nisn,Nama,Kota,Kecamatan,Kelurahan,Jalan,TempatLahir,JenisKelamin,TanggalLahir,TanggalMasuk,TanggalKeluar,TanggalLulus,NikOrtu) VALUES
-	 (N'0031',N'4313138177',N'Reksa Dee Candraditya',N'Surakarta',N'Jebres',N'Jebres',N'Jl. Kabut',N'Surakarta',1,'2008-04-20','2021-08-17',NULL,NULL,N'3350175818560760'),
-	 (N'0032',N'4313134000',N'Andi Fauzi Prasetyo',N'Surakarta',N'Jebres',N'Jebres',N'Gg tegalkuniran No.35',N'Sukoharjo',1,'2008-04-25','2021-08-17',NULL,NULL,N'3342150042097340'),
-	 (N'0033',N'4313129822',N'Risqy Amalia',N'Surakarta',N'Jebres',N'Pucangsawit',N'Jl. Cokroaminoto',N'Gunung Kidul',0,'2008-09-24','2021-08-17',NULL,NULL,N'3371431261788890'),
-	 (N'0034',N'4313125644',N'Ramanta Daniela',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Kali Merbau',N'Sukoharjo',0,'2009-05-31','2022-08-06',NULL,NULL,N'3326367350161410'),
-	 (N'0035',N'4313121466',N'Sebastian Zain',N'Surakarta',N'Jebres',N'Pucangsawit',N'Jl. Porong No.13',N'Surakarta',1,'2009-03-11','2022-08-06',NULL,NULL,N'3300483443129920'),
-	 (N'0036',N'4313117289',N'Maruto Ibidemu',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Kali Kuantan 1',N'Sukoharjo',1,'2009-07-16','2022-08-06',NULL,NULL,N'3334560414759890'),
-	 (N'0037',N'4313113111',N'Hari Larassati',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Kali Kuantan 1 No.8',N'Surakarta',0,'2009-07-16','2022-08-06',NULL,NULL,N'3303976791750970'),
-	 (N'0038',N'4313108933',N'Ressy Miftah',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Kali kampar III',N'Klaten',0,'2009-07-05','2022-08-06',NULL,NULL,N'3310169575991100'),
-	 (N'0039',N'4313104755',N'Rinaldy Hilmiansyah',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Kali Sindang No.15',N'Surakarta',1,'2009-09-25','2022-08-06',NULL,NULL,N'3372902755469200'),
-	 (N'0040',N'4313100578',N'Bony Pramanda',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Juanda No.139a',N'Semarang',1,'2009-03-28','2022-08-06',NULL,NULL,N'3373710348717840');
-INSERT INTO SEKOLAH.dbo.SISWA (Nis,Nisn,Nama,Kota,Kecamatan,Kelurahan,Jalan,TempatLahir,JenisKelamin,TanggalLahir,TanggalMasuk,TanggalKeluar,TanggalLulus,NikOrtu) VALUES
-	 (N'0041',N'4313096400',N'Bryan Josh',N'Surakarta',N'Jebres',N'Gandekan',N'Jl. Cut Nya Dien No.21',N'Surakarta',1,'2009-09-25','2022-08-06',NULL,NULL,N'3380056772819530'),
-	 (N'0042',N'4313092222',N'Riska Febriani',N'Surakarta',N'Jebres',N'Gandekan',N'Jl. RE Martadinata No.181',N'Sukoharjo',0,'2009-01-18','2022-08-06',NULL,NULL,N'3301267166242440'),
-	 (N'0043',N'4313088044',N'Siti Geryance',N'Surakarta',N'Jebres',N'Gandekan',N'Jl. Kp. Nongsongan No.658',N'Lampung',1,'2009-05-28','2022-08-06',NULL,NULL,N'3380043946884540'),
-	 (N'0044',N'4313083867',N'Febri Sastrawani',N'Surakarta',N'Pasar Kliwon',N'Kampung Baru',N'Jl. Ronggowarsito',N'Sukoharjo',0,'2009-08-09','2022-08-06',NULL,NULL,N'3350493935934750'),
-	 (N'0045',N'4313079689',N'Amanda Manurung',N'Surakarta',N'Pasar Kliwon',N'Jebres',N'Jl. Jend. Urip Sumoharjo 104-117',N'Surakarta',0,'2009-08-17','2022-08-06',NULL,NULL,N'3301854222713830');
+INSERT INTO SEKOLAH.dbo.SISWA (Nis,Nisn,Nama,Kota,Kecamatan,Kelurahan,Jalan,TempatLahir,JenisKelamin,TanggalLahir,TanggalMasuk,NikOrtu) VALUES
+	 (N'0001',N'4313287581',N'Kasih Mega Sasmita',N'Surakarta',N'Banjarsari',N'Jebres',N'Jl. Arif Rahman Hakim 81',N'Surakarta',1,'2006-10-27','2019-08-12',N'3358855077184980'),
+	 (N'0002',N'4313243448',N'Guntur Adi Atmadja',N'Surakarta',N'Banjarsari',N'Jebres',N'Jl. Irian 17-31',N'Sukoharjo',0,'2006-05-27','2019-08-12',N'3352736411223150'),
+	 (N'0003',N'4313226940',N'Suryadi Bambang Sasmita',N'Surakarta',N'Banjarsari',N'Gilingan',N'Jl. DI Panjaitan 11-15',N'Jakarta',0,'2006-01-30','2019-08-12',N'3357366291969810'),
+	 (N'0004',N'4313237477',N'Ade Guntur Sasmita',N'Surakarta',N'Banjarsari',N'Ketelan',N'Jl. R. M. Said 82-78',N'Sukoharjo',0,'2006-08-07','2019-08-12',N'3311937122629060'),
+	 (N'0005',N'4313299357',N'Susilo Sukarno Iskandar',N'Surakarta',N'Banjarsari',N'Ketelan',N'Jl. Gajahmada 82',N'Surakarta',0,'2006-01-27','2019-08-12',N'3327311505556210'),
+	 (N'0006',N'4313230927',N'Ari Setiawan Tahyadi',N'Surakarta',N'Banjarsari',N'Punggawan',N'Jl. Bungur I No.21',N'Sukoharjo',0,'2006-11-05','2019-08-12',N'3312498178030100'),
+	 (N'0007',N'4313209455',N'Bethari Susanti Yuwono',N'Surakarta',N'Banjarsari',N'Punggawan',N'Jl. Yosodipuro',N'Karanganyar',1,'2006-03-09','2019-08-12',N'3337890045527750'),
+	 (N'0008',N'4313252488',N'Yuliana Leony Setiabudi',N'Surakarta',N'Banjarsari',N'Timuran',N'Jl. Gajahmada,',N'Klaten',1,'2006-05-07','2019-08-12',N'3366708648809400'),
+	 (N'0009',N'4313253516',N'Citra Intan Halim',N'Surakarta',N'Banjarsari',N'Timuran',N'Jl. Soka VI No.1',N'Boyolali',1,'2006-12-01','2019-08-12',N'3339356849039430'),
+	 (N'0010',N'4313205909',N'Ivan Yuda Darmali',N'Surakarta',N'Laweyan',N'Panularan',N'Gg. Rajamanggala 1',N'Semarang',0,'2007-02-19','2020-08-15',N'3354376504459980');
+INSERT INTO SEKOLAH.dbo.SISWA (Nis,Nisn,Nama,Kota,Kecamatan,Kelurahan,Jalan,TempatLahir,JenisKelamin,TanggalLahir,TanggalMasuk,NikOrtu) VALUES
+	 (N'0011',N'4313221732',N'Richard Islami',N'Surakarta',N'Laweyan',N'Tipes',N'Jl. Moh. Yamin 166-158',N'Surakarta',1,'2007-02-17','2020-08-15',N'3387245011432740'),
+	 (N'0012',N'4313217554',N'Putri Gayatri',N'Surakarta',N'Laweyan',N'Tipes',N'Jl. Wijaya Kusuma',N'Sukoharjo',0,'2007-03-25','2020-08-15',N'3356698509680710'),
+	 (N'0013',N'4313213377',N'Lintang Cahya',N'Surakarta',N'Serengan',N'Tipes',N'Jl. Bhayangkara',N'Yogyakarta',1,'2007-01-23','2020-08-15',N'3322394863627910'),
+	 (N'0014',N'4313209199',N'Aldi Indra',N'Surakarta',N'Laweyan',N'Panularan',N'Jl. Tejomoyo Selatan 8',N'Sukoharjo',1,'2007-09-24','2020-08-15',N'3355175446077530'),
+	 (N'0015',N'4313205021',N'Azmi Bayhacki',N'Surakarta',N'Laweyan',N'Penumping',N'Jl. Dr. Rajiman No.347',N'Surakarta',1,'2007-11-18','2020-08-15',N'3333382983837480'),
+	 (N'0016',N'4313200843',N'Cinta Wardani',N'Surakarta',N'Laweyan',N'Penumping',N'Jl. Sutowijoyo 1',N'Sukoharjo',0,'2007-10-14','2020-08-15',N'3315116448689080'),
+	 (N'0017',N'4313196666',N'Mochammad Qodriyah',N'Surakarta',N'Laweyan',N'Bumi',N'Jl. Batik Keris',N'Salatiga',1,'2007-08-16','2020-08-15',N'3353755312426660'),
+	 (N'0018',N'4313192488',N'Syarief Farishy',N'Surakarta',N'Laweyan',N'Bumi',N'Jl. Dr. Rajiman No.461',N'Klaten',1,'2007-08-27','2020-08-15',N'3391773594789590'),
+	 (N'0019',N'4313188310',N'Givan Daniel Raisid',N'Surakarta',N'Laweyan',N'Bumi',N'Jl. Dr. Rajiman No.432E',N'Boyolali',1,'2007-09-14','2020-08-15',N'3303168486211500'),
+	 (N'0020',N'4313184132',N'Dikposa Agtrivia',N'Surakarta',N'Laweyan',N'Sriwedari',N'Jl. Dr. Cipto Mangunkusumo No.18',N'Semarang',0,'2007-11-01','2020-08-15',N'3305047545050660');
+INSERT INTO SEKOLAH.dbo.SISWA (Nis,Nisn,Nama,Kota,Kecamatan,Kelurahan,Jalan,TempatLahir,JenisKelamin,TanggalLahir,TanggalMasuk,NikOrtu) VALUES
+	 (N'0021',N'4313179955',N'Mubarak Alrendy Noviana',N'Surakarta',N'Laweyan',N'Penumping',N'Jl. Kalitan No.12',N'Surakarta',1,'2007-04-14','2020-08-15',N'3372223490705380'),
+	 (N'0022',N'4313175777',N'Deristya Zulfianna',N'Surakarta',N'Laweyan',N'Sriwedari',N'Jl. Dr. Sutomo',N'Sukoharjo',0,'2008-10-03','2021-08-17',N'3357502588002590'),
+	 (N'0023',N'4313171599',N'Eka Bony Marwah',N'Surakarta',N'Laweyan',N'Penumping',N'Gg. I Kalitan',N'Kulon Progo',1,'2008-03-01','2021-08-17',N'3323327829306850'),
+	 (N'0024',N'4313167422',N'Sumandi Izhar',N'Surakarta',N'Jebres',N'Jebres',N'Jl. Guruh',N'Sukoharjo',1,'2008-08-23','2021-08-17',N'3345199244640220'),
+	 (N'0025',N'4313163244',N'Irlan Pemana',N'Surakarta',N'Jebres',N'Jebres',N'Jl. Petir No.23',N'Surakarta',1,'2008-07-06','2021-08-17',N'3370093250814170'),
+	 (N'0026',N'4313159066',N'Juno Satria',N'Surakarta',N'Jebres',N'Jebres',N'Gg. Guruh I No.30-6',N'Sukoharjo',1,'2008-11-24','2021-08-17',N'3321872835587910'),
+	 (N'0027',N'4313154888',N'Christiana Keviati',N'Surakarta',N'Jebres',N'Jebres',N'Jl. Gg. Guntur ll No.30',N'Salatiga',0,'2008-04-13','2021-08-17',N'3366155158279800'),
+	 (N'0028',N'4313150711',N'Adam Machmud',N'Surakarta',N'Jebres',N'Kentingan',N'Jln.halilintar no.99',N'Klaten',1,'2008-03-24','2021-08-17',N'3376281658987110'),
+	 (N'0029',N'4313146533',N'Allen Nistiyana',N'Surakarta',N'Jebres',N'Jebres',N'Gg. Gelatik',N'Surakarta',0,'2007-12-17','2021-08-17',N'3337646823170630'),
+	 (N'0030',N'4313142355',N'Hesti Nathania',N'Surakarta',N'Jebres',N'Jebres',N'Jl. Ki Hajar Dewantara No.78',N'Surakarta',0,'2008-05-02','2021-08-17',N'3309542387405480');
+INSERT INTO SEKOLAH.dbo.SISWA (Nis,Nisn,Nama,Kota,Kecamatan,Kelurahan,Jalan,TempatLahir,JenisKelamin,TanggalLahir,TanggalMasuk,NikOrtu) VALUES
+	 (N'0031',N'4313138177',N'Reksa Dee Candraditya',N'Surakarta',N'Jebres',N'Jebres',N'Jl. Kabut',N'Surakarta',1,'2008-04-20','2021-08-17',N'3350175818560760'),
+	 (N'0032',N'4313134000',N'Andi Fauzi Prasetyo',N'Surakarta',N'Jebres',N'Jebres',N'Gg tegalkuniran No.35',N'Sukoharjo',1,'2008-04-25','2021-08-17',N'3342150042097340'),
+	 (N'0033',N'4313129822',N'Risqy Amalia',N'Surakarta',N'Jebres',N'Pucangsawit',N'Jl. Cokroaminoto',N'Gunung Kidul',0,'2008-09-24','2021-08-17',N'3371431261788890'),
+	 (N'0034',N'4313125644',N'Ramanta Daniela',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Kali Merbau',N'Sukoharjo',0,'2009-05-31','2022-08-06',N'3326367350161410'),
+	 (N'0035',N'4313121466',N'Sebastian Zain',N'Surakarta',N'Jebres',N'Pucangsawit',N'Jl. Porong No.13',N'Surakarta',1,'2009-03-11','2022-08-06',N'3300483443129920'),
+	 (N'0036',N'4313117289',N'Maruto Ibidemu',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Kali Kuantan 1',N'Sukoharjo',1,'2009-07-16','2022-08-06',N'3334560414759890'),
+	 (N'0037',N'4313113111',N'Hari Larassati',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Kali Kuantan 1 No.8',N'Surakarta',0,'2009-07-16','2022-08-06',N'3303976791750970'),
+	 (N'0038',N'4313108933',N'Ressy Miftah',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Kali kampar III',N'Klaten',0,'2009-07-05','2022-08-06',N'3310169575991100'),
+	 (N'0039',N'4313104755',N'Rinaldy Hilmiansyah',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Kali Sindang No.15',N'Surakarta',1,'2009-09-25','2022-08-06',N'3372902755469200'),
+	 (N'0040',N'4313100578',N'Bony Pramanda',N'Surakarta',N'Jebres',N'Jagalan',N'Jl. Juanda No.139a',N'Semarang',1,'2009-03-28','2022-08-06',N'3373710348717840');
+INSERT INTO SEKOLAH.dbo.SISWA (Nis,Nisn,Nama,Kota,Kecamatan,Kelurahan,Jalan,TempatLahir,JenisKelamin,TanggalLahir,TanggalMasuk,NikOrtu) VALUES
+	 (N'0041',N'4313096400',N'Bryan Josh',N'Surakarta',N'Jebres',N'Gandekan',N'Jl. Cut Nya Dien No.21',N'Surakarta',1,'2009-09-25','2022-08-06',N'3380056772819530'),
+	 (N'0042',N'4313092222',N'Riska Febriani',N'Surakarta',N'Jebres',N'Gandekan',N'Jl. RE Martadinata No.181',N'Sukoharjo',0,'2009-01-18','2022-08-06',N'3301267166242440'),
+	 (N'0043',N'4313088044',N'Siti Geryance',N'Surakarta',N'Jebres',N'Gandekan',N'Jl. Kp. Nongsongan No.658',N'Lampung',1,'2009-05-28','2022-08-06',N'3380043946884540'),
+	 (N'0044',N'4313083867',N'Febri Sastrawani',N'Surakarta',N'Pasar Kliwon',N'Kampung Baru',N'Jl. Ronggowarsito',N'Sukoharjo',0,'2009-08-09','2022-08-06',N'3350493935934750'),
+	 (N'0045',N'4313079689',N'Amanda Manurung',N'Surakarta',N'Pasar Kliwon',N'Jebres',N'Jl. Jend. Urip Sumoharjo 104-117',N'Surakarta',0,'2009-08-17','2022-08-06',N'3301854222713830');
+
+INSERT INTO SEKOLAH.dbo.SISWA_KELUAR (Nis, TanggalKeluar) VALUES (N'0014', '2021-06-17'), (N'0027', '2022-06-06');
+
+INSERT INTO SEKOLAH.dbo.SISWA_LULUS (Nis, TanggalLulus) VALUES 
+(N'0001', '2022-06-13'),
+(N'0002', '2022-06-13'),
+(N'0003', '2022-06-13'),
+(N'0004', '2022-06-13'),
+(N'0005', '2022-06-13'),
+(N'0006', '2022-06-13'),
+(N'0007', '2022-06-13'),
+(N'0008', '2022-06-13'),
+(N'0009', '2022-06-13');
 
 INSERT INTO SEKOLAH.dbo.GURU (KdGuru,NamaGuru,JenisKelamin) VALUES
 	 (N'G0001',N'Bima Ari Hadiman',0),
@@ -473,4 +486,3 @@ INSERT INTO SEKOLAH.dbo.NILAIULANGAN (NisSiswa,KdGuru,KdKelas,NamaMapel,UlanganK
 	 (N'0022',N'G0015',N'2020-8-A',N'PJOK',3,69),
 	 (N'0022',N'G0017',N'2020-8-A',N'Seni dan Prakarya',2,87),
 	 (N'0022',N'G0019',N'2020-8-A',N'Informatika',2,77);
-
