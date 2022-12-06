@@ -188,6 +188,8 @@ INSERT INTO SEKOLAH.dbo.KELAS (KdKelas,NamaKelas,TahunAjaran,Grade,KdGuru) VALUE
 	 (N'2022-9-B',N'B',2022,9,N'G0008'),
 	 (N'2022-9-C',N'C',2022,9,N'G0009');
 
+INSERT INTO SEKOLAH.dbo.SEMESTER (SemesterKe) VALUES (1), (2);
+
 INSERT INTO SEKOLAH.dbo.ORGANISASI (KdOrganisasi,Nama,ThKepengurusan,KdGuru) VALUES
 	 (N'2021-Basket',N'Basket',2021,N'G0005'),
 	 (N'2021-Batminton',N'Batminton',2021,N'G0001'),
