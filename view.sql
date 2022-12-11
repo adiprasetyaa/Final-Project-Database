@@ -33,7 +33,7 @@ CREATE VIEW
 	V_OrganisasiDiikutiSiswa 
 AS
 SELECT 
-	s.Nama NamaSiswa, o.Nama NamaOrganisasi, mo.Jabatan 
+	s.Nama NamaSiswa, o.Nama NamaOrganisasi, mo.Jabatan, o.ThKepengurusan Tahun 
 FROM 
 	SISWA s 
 JOIN 
@@ -46,12 +46,12 @@ ON
 	mo.KdOrganisasi = o.KdOrganisasi;
 
 -- MASIH ERROR
-SELECT s.Nama, n.NamaMapel ,n.TugasKe ,n.Nilai, n2.UlanganKe , n2.Nilai 
-FROM NILAITUGAS n 
-JOIN SISWA s ON n.NisSiswa  = s.Nis  
-JOIN NILAIULANGAN n2 ON n2.NisSiswa  = s.Nis 
-WHERE n.TugasKe = n2.UlanganKe 
-ORDER BY n.NamaMapel ,n.TugasKe,n2.UlanganKe ASC;
+--SELECT s.Nama, n.NamaMapel ,n.TugasKe ,n.Nilai, n2.UlanganKe , n2.Nilai 
+--FROM NILAITUGAS n 
+--JOIN SISWA s ON n.NisSiswa  = s.Nis  
+--JOIN NILAIULANGAN n2 ON n2.NisSiswa  = s.Nis 
+--WHERE n.TugasKe = n2.UlanganKe 
+--ORDER BY n.NamaMapel ,n.TugasKe,n2.UlanganKe ASC;
 
 
 --siswa yang keluar sebelum lulus
@@ -59,7 +59,7 @@ CREATE VIEW
 	V_SiswaKeluar
 AS
 SELECT 
-	s.Nama, sk.TanggalKeluar 
+	s.*, sk.TanggalKeluar 
 FROM 
 	SISWA s 
 JOIN 
@@ -91,6 +91,7 @@ FROM
 GROUP BY 
 	k.MbNonAkademik;
 
+
 -- List MB akademik dari siswa secara keseluruhan 
 CREATE VIEW 
 	V_MbAkademik
@@ -118,20 +119,20 @@ ON
 
 
 -- List MB akademik dari siswa [IPS]
-SELECT 
-	s.Nama , k.MbAkademik 
-FROM 
-	SISWA s 
-INNER JOIN 
-	KONSULTASI k 
-ON 
-	s.Nis  = k.NisSiswa 
-WHERE 
-	k.MbAkademik  
-LIKE 
-	'%IPS%'
-ORDER BY 
-	k.MbAkademik ,s.Nama ASC;
+--SELECT 
+--	s.Nama , k.MbAkademik 
+--FROM 
+--	SISWA s 
+--INNER JOIN 
+--	KONSULTASI k 
+--ON 
+--	s.Nis  = k.NisSiswa 
+--WHERE 
+--	k.MbAkademik  
+--LIKE 
+--	'%IPS%'
+--ORDER BY 
+--	k.MbAkademik ,s.Nama ASC;
 
 -- List MB Akademik dari siswa [MIPA]
 CREATE VIEW 
@@ -150,17 +151,17 @@ WHERE
 
 -- Jumlah Kehadiran Siswa
 
-SELECT s.Nama, COUNT(p.Status) AS JumlahKehadiran
-FROM SISWA s INNER JOIN PRESENSI p  ON s.Nis  = p.NisSiswa 
-WHERE p.Status NOT LIKE '%H%'
-GROUP BY s.Nama 
+--SELECT s.Nama, COUNT(p.Status) AS JumlahKehadiran
+--FROM SISWA s INNER JOIN PRESENSI p  ON s.Nis  = p.NisSiswa 
+--WHERE p.Status NOT LIKE '%H%'
+--GROUP BY s.Nama 
 
 -- Riwayat Belajar Dari Siswa
 CREATE VIEW 
 	V_RiwayatBelajar
 AS
 SELECT 
-	s.Nama, k.Grade ,k.NamaKelas , k.TahunAjaran 
+	s.Nis, s.Nama, k.Grade ,k.NamaKelas , k.TahunAjaran 
 FROM 
 	SISWA s 
 JOIN 
@@ -170,24 +171,22 @@ ON
 JOIN 
 	KELAS k 
 ON
-	rb.KdKelas  = k.KdKelas 
-WHERE 
-	s.Nis = '0001';
+	rb.KdKelas  = k.KdKelas;
 
 
 -- Nilai Siswa Selama Satu Semester
 
-SELECT 
-	s.Nama, n.NamaMapel, n.TugasKe, n.Nilai , n2.UlanganKe , n2.Nilai 
-FROM NILAITUGAS n INNER JOIN SISWA s ON n.NisSiswa = s.Nis 
-INNER JOIN NILAIULANGAN n2 ON s.Nis = n2.NisSiswa 
+--SELECT 
+--	s.Nama, n.NamaMapel, n.TugasKe, n.Nilai , n2.UlanganKe , n2.Nilai 
+--FROM NILAITUGAS n INNER JOIN SISWA s ON n.NisSiswa = s.Nis 
+--INNER JOIN NILAIULANGAN n2 ON s.Nis = n2.NisSiswa;
 
 
 --list nama siswa yang sudah lulus
-CREATE VIEW V_SiswaLulus
+CREATE  VIEW V_SiswaLulus
 AS
 SELECT 
-	s.Nama, s.TanggalMasuk, sl.TanggalLulus 
+	s.*, sl.TanggalLulus 
 FROM 
 	SISWA s 
 JOIN 
@@ -200,7 +199,7 @@ CREATE  VIEW
 	V_NilaiSiswa
 AS
 SELECT 
-	s.Nama ,g.NamaGuru ,m.NamaMapel,k.NamaKelas, SUM(nt.Nilai)/COUNT(nt.nilai) NILAI_TUGAS , SUM(nu.Nilai)/COUNT(nu.Nilai) NILAI_ULANGAN, m.NilaiUts , m.NilaiUas 
+	s.Nama,k.Grade  ,g.NamaGuru ,m.NamaMapel,s2.SemesterKe ,k.NamaKelas, SUM(nt.Nilai)/COUNT(nt.nilai) NILAI_TUGAS , SUM(nu.Nilai)/COUNT(nu.Nilai) NILAI_ULANGAN, m.NilaiUts , m.NilaiUas 
 FROM
 	MENGAJAR m 
 JOIN
@@ -226,17 +225,24 @@ JOIN
 ON
 	g.KdGuru=m.KdGuru 
 JOIN 
+	SEMESTER s2 
+ON 
+	s2.SemesterKe  = m.Semester 
+JOIN 
 	KELAS k
 ON
 	k.KdKelas = m.KdKelas 
 GROUP BY 
-	s.Nama ,g.NamaGuru ,m.NamaMapel,k.NamaKelas, m.NilaiUts , m.NilaiUas ;
+	s.Nama ,g.NamaGuru ,m.NamaMapel,k.NamaKelas, m.NilaiUts , m.NilaiUas,s2.SemesterKe, k.Grade  ;
 
 SELECT * from V_NilaiSiswa;
 
 --absensi tiap siswa selama satu semester pada suatu mata pelajaran
+CREATE VIEW 
+	V_TotalMasuk
+AS
 SELECT 
-	s.Nama  ,g.NamaGuru ,m.NamaMapel,k.NamaKelas, COUNT(p.NisSiswa)
+	s.Nama ,s2.SemesterKe ,k.Grade  ,g.NamaGuru ,m.NamaMapel,k.NamaKelas, COUNT(p.NisSiswa) TotalMasuk
 FROM
 	MENGAJAR m 
 JOIN
@@ -255,12 +261,14 @@ JOIN
 ON
 	g.KdGuru=m.KdGuru 
 JOIN 
+	SEMESTER s2 
+ON 
+	s2.SemesterKe  = m.Semester 
+JOIN 
 	KELAS k
 ON
 	k.KdKelas = m.KdKelas 
 WHERE 
 	p.Status = 'H'
 GROUP BY 
-	s.Nama ,g.NamaGuru ,m.NamaMapel,k.NamaKelas ;
-	
-	
+	s.Nama ,g.NamaGuru ,m.NamaMapel,k.NamaKelas,s2.SemesterKe ,k.Grade ;
